@@ -1,0 +1,15 @@
+{
+  "validUser": {
+    "email": "qa-tester-1759530219181@test.com",
+    "password": "12345",
+    "name": "QA Tester"
+  },
+  "invalidUser": {
+    "email": "qa-tester-1759530219181@test.com",
+    "password": "123456789"
+  },
+  "contactUs": {
+    "subject": "Realizei uma compra de forma errada",
+    "message": "Por favor eu gostaria de realizar o cancelamento."
+  }
+}
