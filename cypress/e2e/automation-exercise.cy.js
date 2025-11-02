@@ -1,11 +1,9 @@
 /// <reference types="cypress" />
 
 import usersData from '../fixtures/users.json';
-import { faker, fakerPT_BR } from '@faker-js/faker';
-import menu from '../modules/menu';
-import login from '../modules/login';
 import cadastro from '../modules/cadastro';
-import { preencherCadastro } from '../modules/cadastro';
+import login from '../modules/login';
+import menu from '../modules/menu';
 
 describe('Automarion Exercise', () => {
   beforeEach(() => {
