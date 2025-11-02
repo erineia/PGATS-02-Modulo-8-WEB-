@@ -4,9 +4,10 @@ class Login {
   preencherFormularioPreCadastro() {
     const firstName = faker.person.firstName();
     const lastName = faker.person.lastName();
+    const email = `qa-tester-${faker.number.bigInt()}@test.com`;
 
     cy.get('[data-qa="signup-name"]').type(`${firstName} ${lastName}`);
-    cy.get('[data-qa="signup-email"]').type(getRandomEmail());
+    cy.get('[data-qa="signup-email"]').type(email);
 
     cy.contains('button', 'Signup').click();
   }
