@@ -1,7 +1,6 @@
 /// <reference types="cypress" />
 
 import usersData from '../fixtures/users.json';
-import { getRandomNumber, getRandomEmail } from '../support/helpers';
 import { faker, fakerPT_BR } from '@faker-js/faker';
 import menu from '../modules/menu';
 import login from '../modules/login';
