@@ -1,5 +1,7 @@
+import { faker } from '@faker-js/faker';
+
 class Cadastro {
-  preencherFormularioDeCadastroCompleto() {
+  preencherFormularioCadastroCompleto() {
     const firstName = faker.person.firstName();
     const lastName = faker.person.lastName();
 

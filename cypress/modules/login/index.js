@@ -17,8 +17,8 @@ class Login {
     cy.contains('button', 'Signup').click();
   }
   preencherFormularioDeLogin(user, pass) {
-    cy.get('[data-qa="login-email"]').type(pass);
-    cy.get('[data-qa="login-password"]').type(user);
+    cy.get('[data-qa="login-email"]').type(user);
+    cy.get('[data-qa="login-password"]').type(pass);
 
     cy.get('[data-qa="login-button"]').click();
   }

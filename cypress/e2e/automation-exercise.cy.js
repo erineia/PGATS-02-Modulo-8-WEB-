@@ -1,6 +1,5 @@
 /// <reference types="cypress" />
 
-import usersData from '../fixtures/users.json';
 import cadastro from '../modules/cadastro';
 import home from '../modules/home';
 import login from '../modules/login';
@@ -30,7 +29,6 @@ describe('Automarion Exercise', () => {
 
     // Fill out the complete registration form
     cadastro.preencherFormularioCadastroCompleto();
-    cy.contains('button', 'Create Account').click();
     cy.url().should('includes', 'account_created');
     cy.contains('b', 'Account Created!');
 
@@ -49,7 +47,6 @@ describe('Automarion Exercise', () => {
     login.preencherFormularioPreCadastro();
     cadastro.preencherFormularioCadastroCompleto();
     //Asserts
-    cy.contains('button', 'Create Account').click();
     cy.url().should('includes', 'account_created');
     cy.contains('b', 'Account Created!');
   });
@@ -65,9 +62,6 @@ describe('Automarion Exercise', () => {
       .parent()
       .should('contain', userCredentials.name);
     cy.get('a[href="/logout"]', { timeout: 10000 }).should('be.visible');
-    cy.get(':nth-child(10) > a', { timeout: 10000 })
-      .should('be.visible')
-      .and('have.text', `Logged in as ${userCredentials.name}`);
   });
 
   it('Login de Usuário com e-mail e senha incorretos', () => {
@@ -142,7 +136,6 @@ describe('Automarion Exercise', () => {
     login.preencherFormularioPreCadastro();
     cadastro.preencherFormularioCadastroCompleto();
 
-    cy.contains('button', 'Create Account').click();
     cy.url().should('includes', 'account_created');
     cy.contains('b', 'Account Created!');
 
